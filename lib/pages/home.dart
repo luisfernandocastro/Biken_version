@@ -9,16 +9,16 @@ const _minSize = 0.0;
 const _maxSize = 35.0;
 bool expanded = false;
 
-class ScreenPrincipal extends StatefulWidget {
-  ScreenPrincipal({
+class ScreenHome extends StatefulWidget {
+  ScreenHome({
     Key key,
   }) : super(key: key);
 
   @override
-  _ScreenPrincipalState createState() => _ScreenPrincipalState();
+  _ScreenHomeState createState() => _ScreenHomeState();
 }
 
-class _ScreenPrincipalState extends State<ScreenPrincipal> {
+class _ScreenHomeState extends State<ScreenHome> {
   bool _activate = false;
   final _scrollController = ScrollController();
   @override

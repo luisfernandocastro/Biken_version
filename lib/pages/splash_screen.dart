@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:biken/pages/principal.dart';
+import 'package:biken/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/components/icono_biken.dart';
 import 'package:biken/components/painter.dart';
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => ScreenPrincipal(),
+          builder: (context) => ScreenHome(),
         ),
       ),
     );
