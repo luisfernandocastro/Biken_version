@@ -8,6 +8,7 @@ import 'package:hexcolor/hexcolor.dart';
 const _minSize = 0.0;
 const _maxSize = 35.0;
 bool expanded = false;
+int selectedIndex = 0;
 
 class ScreenHome extends StatefulWidget {
   ScreenHome({
@@ -255,28 +256,61 @@ class _ScreenHomeState extends State<ScreenHome> {
 
   Widget tabBarAnimated() {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 500),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(50),
+          topLeft: Radius.circular(50),
+        ),
+      ),
+      duration: Duration(milliseconds: 600),
       height: expanded ? _minSize : _maxSize,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           InkWell(
-            onTap: () {},
+            borderRadius: BorderRadius.circular(50),
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
             child: Icon(
               BikenIcons.bike_fill,
-              color: Colors.black,
-              size: 35,
+              color: (selectedIndex == 0)
+                  ? HexColor('#2259BD')
+                  : Theme.of(context).iconTheme.color,
+              size: 30,
             ),
           ),
-          Icon(
-            Icons.home_filled,
-            color: HexColor('#2059BD'),
-            size: 30,
+          InkWell(
+            borderRadius: BorderRadius.circular(50),
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: Icon(
+              Icons.home_filled,
+              color: (selectedIndex == 1)
+                  ? HexColor('#2259BD')
+                  : Theme.of(context).iconTheme.color,
+              size: 25,
+            ),
           ),
-          Icon(
-            BikenIcons.question_fill,
-            color: Colors.black,
-            size: 25,
+          InkWell(
+            borderRadius: BorderRadius.circular(50),
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: Icon(
+              BikenIcons.question_fill,
+              color: (selectedIndex == 2)
+                  ? HexColor('#2259BD')
+                  : Theme.of(context).iconTheme.color,
+              size: 22,
+            ),
           ),
         ],
       ),
