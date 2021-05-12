@@ -20,6 +20,5 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     '/recuperarPasswordScreen4': (context) => RecuperarPasswordScreen4(),
     '/ScreenHome': (context) => ScreenHome(),
     '/Screenprofile': (context) => ProfileScreen(),
-    /* '/prueba': (context) => InstagramSearchGrid(), */
   };
 }

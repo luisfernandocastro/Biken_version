@@ -148,8 +148,8 @@ class _ScreenHomeState extends State<ScreenHome> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15.0),
                                 child: FadeInImage(
-                                  image: AssetImage(
-                                      'assets/images/bike$imagen.jpg'),
+                                  image: NetworkImage(
+                                      'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike$imagen.jpg'),
                                   placeholder:
                                       AssetImage('assets/images/loading.gif'),
                                 ),

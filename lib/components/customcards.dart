@@ -21,14 +21,14 @@ class CustomCards extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: sizeHeight,
-            height: sizeWidth,
+            width: sizeWidth,
+            height: sizeHeight,
             child: Column(
               children: [
                 Stack(
                   children: [
                     FadeInImage(
-                      image: AssetImage('$imageCard'),
+                      image: NetworkImage('$imageCard'),
                       placeholder: AssetImage(
                         'assets/images/loading.gif',
                       ),

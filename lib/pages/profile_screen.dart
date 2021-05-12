@@ -5,12 +5,11 @@ import 'package:biken/components/texto_divider.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-const _minPosition = 50.0;
-const _maxPosition = 80.0;
 bool expanded = false;
-const _minSizeName = 30.0;
-const _maxSizeName = 53.0;
-bool moving = false;
+const _endPosition = 50.0;
+const _startPosition = 75.0;
+const _endSizeName = 25.0;
+const _startSizeName = 45.0;
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key key}) : super(key: key);
@@ -23,7 +22,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     const coveragePageImage = 'https://www.xtrafondos.com/thumbs/1_4709.jpg';
     const profileImage =
         'https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg';
@@ -73,57 +71,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 bottom: 0,
                 right: 0,
                 left: 0,
-                child: NotificationListener<ScrollNotification>(
-                  onNotification: (details) {
-                    _onScrollDirection();
-                    return true;
-                  },
-                  child: ListView(
-                    controller: _scrollController,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.only(
-                            top: 95, right: 10.0, left: 10.0),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(30),
-                          ),
-                        ),
-                        child: Column(
+                child: Container(
+                  padding:
+                      const EdgeInsets.only(top: 105, right: 10.0, left: 10.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(30),
+                    ),
+                  ),
+                  child: NotificationListener<ScrollNotification>(
+                    onNotification: (details) {
+                      _onScrollDirection();
+                      return true;
+                    },
+                    child: ListView(
+                      controller: _scrollController,
+                      children: [
+                        Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 15,
-                              ),
-                              child: TextoDivider(
-                                textotitle: 'Mis Bicicletas',
-                                iconOne: Icons.list,
-                                iconTwo: Icons.grid_view,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
                             Container(
                               child: cardsGrid(),
                             ),
                           ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
               AnimatedPositioned(
-                duration: Duration(milliseconds: 600),
+                duration: Duration(milliseconds: 500),
                 right: 1,
                 left: 1,
-                top: expanded ? _minSizeName : _maxSizeName,
+                top: expanded ? _endSizeName : _startSizeName,
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 147),
+                      padding: EdgeInsets.only(top: 142),
                       child: Text(
                         'Maria Gutierrez',
                         style: TextStyle(
@@ -133,7 +118,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
                     Text(
                       feed,
                       style: TextStyle(
@@ -142,15 +126,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: Colors.black,
                       ),
                     ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                      ),
+                      child: TextoDivider(
+                        textotitle: 'Mis Bicicletas',
+                        iconOne: Icons.list,
+                        iconTwo: Icons.grid_view,
+                      ),
+                    ),
                   ],
                 ),
               ),
               AnimatedPositioned(
                 curve: Curves.easeIn,
-                duration: Duration(milliseconds: 600),
+                duration: Duration(milliseconds: 500),
                 right: 1,
                 left: 1,
-                top: expanded ? _minPosition : _maxPosition,
+                top: expanded ? _endPosition : _startPosition,
                 child: Hero(
                   tag: profileImage,
                   child: AvatarIcon(
@@ -195,37 +192,43 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Row(
             children: [
               CustomCards(
-                imageCard: 'assets/images/bike1.jpg',
-                sizeHeight: 190,
-                sizeWidth: 190,
+                imageCard:
+                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike1.jpg',
+                sizeHeight: 200,
+                sizeWidth: 230,
               ),
               Column(
                 children: [
                   CustomCards(
-                    imageCard: 'assets/images/bike1.jpg',
+                    imageCard:
+                        'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike2.jpg',
                     sizeHeight: 80,
-                    sizeWidth: 80,
+                    sizeWidth: 92,
                   ),
                   CustomCards(
-                    imageCard: 'assets/images/bike1.jpg',
+                    imageCard:
+                        'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike3.jpg',
                     sizeHeight: 80,
-                    sizeWidth: 80,
+                    sizeWidth: 92,
                   ),
                 ],
               ),
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomCards(
-                imageCard: 'assets/images/bike1.jpg',
-                sizeHeight: 100,
-                sizeWidth: 100,
+                imageCard:
+                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike4.jpg',
+                sizeHeight: 130,
+                sizeWidth: 150,
               ),
               CustomCards(
-                imageCard: 'assets/images/bike1.jpg',
-                sizeHeight: 100,
-                sizeWidth: 100,
+                imageCard:
+                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike5.jpg',
+                sizeHeight: 130,
+                sizeWidth: 150,
               ),
             ],
           ),

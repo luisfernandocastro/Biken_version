@@ -53,7 +53,7 @@ class ItemsCatalogo extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
                         child: FadeInImage(
-                          image: AssetImage('$imagen'),
+                          image: NetworkImage('$imagen'),
                           placeholder: AssetImage('assets/images/loading.gif'),
                         ),
                       ),
