@@ -67,13 +67,10 @@ class _LoginState extends State<Login> {
                                   tipoTexto: TextInputType.text,
                                 ),
                                 RecordarPassword(),
-                                Container(
-                                  height: 50,
-                                  child: BotonPrincipal(
-                                      textBoton: 'Iniciar sesión',
-                                      ruta: '/ScreenPrincipal',
-                                      tag: 'IniciaSesion'),
-                                ),
+                                BotonPrincipal(
+                                    textBoton: 'Iniciar sesión',
+                                    ruta: '/ScreenHome',
+                                    tag: 'IniciaSesion'),
                               ],
                             ),
                           )

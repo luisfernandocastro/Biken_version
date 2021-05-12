@@ -1,4 +1,5 @@
 import 'package:biken/components/biken_icons_icons.dart';
+import 'package:biken/components/texto_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/components/gridViewTodos_principal.dart';
 import 'package:biken/components/banner_principal.dart';
@@ -70,14 +71,18 @@ class _ScreenHomeState extends State<ScreenHome> {
                       children: [
                         BannerPrincipal(),
                         SizedBox(height: 15.0),
-                        titulo('Recientes', null, null),
+                        TextoDivider(
+                          textotitle: 'Recientes',
+                          iconOne: null,
+                          iconTwo: null,
+                        ),
                         itemsRecientes(
                           context,
                         ),
-                        titulo(
-                          'Todos',
-                          Icons.filter_alt_outlined,
-                          Icons.grid_view,
+                        TextoDivider(
+                          textotitle: 'Todos',
+                          iconOne: Icons.filter_alt_outlined,
+                          iconTwo: Icons.grid_view,
                         ),
                         GridViewTodos(),
                       ],
@@ -90,38 +95,6 @@ class _ScreenHomeState extends State<ScreenHome> {
         ),
       ),
       bottomNavigationBar: tabBarAnimated(),
-    );
-  }
-
-  Widget titulo(String textotitle, IconData iconFilter, IconData iconGrid) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          '$textotitle',
-          style: TextStyle(
-            color: HexColor('#2059BD'),
-          ),
-        ),
-        Container(
-          child: Row(
-            children: [
-              Icon(
-                //Icons.filter_alt_outlined,
-                iconFilter,
-                color: Color.fromRGBO(32, 89, 189, 1.5),
-                size: 20,
-              ),
-              Icon(
-                //Icons.grid_view,
-                iconGrid,
-                color: Colors.grey[400],
-                size: 20,
-              ),
-            ],
-          ),
-        ),
-      ],
     );
   }
 
@@ -302,6 +275,7 @@ class _ScreenHomeState extends State<ScreenHome> {
             onTap: () {
               setState(() {
                 selectedIndex = 2;
+                Navigator.of(context).pushNamed('/Screenprofile');
               });
             },
             child: Icon(

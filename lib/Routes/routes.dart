@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:biken/pages/profile_screen.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen1.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen2.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen3.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen4.dart';
-import 'package:biken/pages/login.dart';
-import 'package:biken/pages/home.dart';
-import 'package:biken/pages/registro.dart';
+import 'package:biken/pages/login_screen.dart';
+import 'package:biken/pages/home_screen.dart';
+import 'package:biken/pages/registro_screen.dart';
 import 'package:biken/pages/splash_screen.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes() {
@@ -18,5 +19,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     '/recuperarPasswordScreen3': (context) => RecuperarPasswordScreen3(),
     '/recuperarPasswordScreen4': (context) => RecuperarPasswordScreen4(),
     '/ScreenHome': (context) => ScreenHome(),
+    '/Screenprofile': (context) => ProfileScreen(),
+    /* '/prueba': (context) => InstagramSearchGrid(), */
   };
 }

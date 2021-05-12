@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:biken/pages/home.dart';
+import 'package:biken/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/components/icono_biken.dart';
 import 'package:biken/components/painter.dart';
