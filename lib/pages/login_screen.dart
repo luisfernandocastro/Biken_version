@@ -50,17 +50,15 @@ class _LoginState extends State<Login> {
                             child: Column(
                               children: <Widget>[
                                 TextBox(
-                                  name: 'Correo',
+                                  placeholder: 'Correo',
                                   icono: null,
-                                  verContrasena: null,
-                                  verCaracteres: false,
                                   tipoTexto: TextInputType.emailAddress,
                                 ),
                                 SizedBox(
                                   height: 30.0,
                                 ),
                                 TextBox(
-                                  name: 'Contraseña',
+                                  placeholder: 'Contraseña',
                                   icono: Icons.remove_red_eye,
                                   verContrasena: verPassword(),
                                   verCaracteres: !this._showPassword,

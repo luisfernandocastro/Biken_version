@@ -100,10 +100,7 @@ class RecuperarPassword extends StatelessWidget {
                       child: Column(
                         children: [
                           TextBox(
-                            name: 'Correo Electronico',
-                            icono: null,
-                            verContrasena: null,
-                            verCaracteres: false,
+                            placeholder: 'Correo Electronico',
                             tipoTexto: TextInputType.emailAddress,
                           ),
                           SizedBox(

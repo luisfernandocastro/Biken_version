@@ -1,3 +1,4 @@
+import 'package:biken/components/containerButton.dart';
 import 'package:biken/components/customcards.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/components/circle_avatarprofile.dart';
@@ -22,7 +23,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
-    const coveragePageImage = 'https://www.xtrafondos.com/thumbs/1_4709.jpg';
     const profileImage =
         'https://cdn.forbes.com.mx/2019/04/blackrrock-invertir-1-640x360.jpg';
 
@@ -32,40 +32,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         builder: (_, constraints) {
           return Stack(
             children: [
-              Positioned(
-                bottom: 380,
-                top: 0,
-                right: 0,
-                left: 0,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(coveragePageImage),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: 40,
-                right: 25,
-                left: 20,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    FloatingActionButton(
-                      backgroundColor: Colors.white,
-                      heroTag: null,
-                      mini: true,
-                      onPressed: () {},
-                      child: const Icon(
-                        Icons.settings,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              ImagePortada(),
+              ButtonSettings(),
               Positioned(
                 top: 150,
                 bottom: 0,
@@ -90,8 +58,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       children: [
                         Column(
                           children: [
-                            Container(
-                              child: cardsGrid(),
+                            cardsGrid(),
+                            const SizedBox(
+                              height: 20.0,
+                            ),
+                            ContainerButton(
+                              title: 'Tus Estadisticas en Biken',
+                              subtitle: 'Ganancias Mensuales',
+                              iconLeading: Icons.query_stats,
+                              colorIconLeading: Colors.black,
+                            ),
+                            const SizedBox(
+                              height: 20.0,
+                            ),
+                            ContainerButton(
+                              title: 'Compartir Biken App',
+                              iconLeading: Icons.share,
+                              colorIconLeading: Colors.black,
+                            ),
+                            const SizedBox(
+                              height: 20.0,
                             ),
                           ],
                         ),
@@ -193,7 +179,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             children: [
               CustomCards(
                 imageCard:
-                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike1.jpg',
+                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike4.jpg',
                 sizeHeight: 200,
                 sizeWidth: 230,
               ),
@@ -201,7 +187,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   CustomCards(
                     imageCard:
-                        'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike2.jpg',
+                        'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike1.jpg',
                     sizeHeight: 80,
                     sizeWidth: 92,
                   ),
@@ -220,7 +206,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             children: [
               CustomCards(
                 imageCard:
-                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike4.jpg',
+                    'https://raw.githubusercontent.com/luisfernandocastro/API_Biken/gh-pages/images/bike2.jpg',
                 sizeHeight: 130,
                 sizeWidth: 150,
               ),
@@ -233,6 +219,59 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ButtonSettings extends StatelessWidget {
+  const ButtonSettings({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 40,
+      right: 25,
+      left: 20,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            backgroundColor: Colors.white,
+            heroTag: null,
+            mini: true,
+            onPressed: () {
+              Navigator.of(context).pushNamed('/ScreenEditProfile');
+            },
+            child: Icon(
+              Icons.settings,
+              color: HexColor('#2029BD'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ImagePortada extends StatelessWidget {
+  const ImagePortada({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const coveragePageImage = 'https://www.xtrafondos.com/thumbs/1_4709.jpg';
+    return Positioned(
+      bottom: 380,
+      top: 0,
+      right: 0,
+      left: 0,
+      child: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(coveragePageImage),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }

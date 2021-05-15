@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 class TextBox extends StatelessWidget {
   const TextBox(
       {Key key,
-      @required this.name,
-      @required this.icono,
-      @required this.verContrasena,
-      @required this.verCaracteres,
+      @required this.placeholder,
+      this.icono,
+      this.verContrasena,
+      this.verCaracteres = false,
       @required this.tipoTexto})
       : super(key: key);
 
-  final String name;
+  final String placeholder;
   final IconData icono;
   final Widget verContrasena;
   final bool verCaracteres;
@@ -37,7 +37,7 @@ class TextBox extends StatelessWidget {
               obscureText: verCaracteres,
               decoration: InputDecoration(
                 border: InputBorder.none,
-                hintText: "$name",
+                hintText: "$placeholder",
                 hintStyle: TextStyle(color: Colors.grey[400]),
                 suffixIcon: verContrasena,
               ),

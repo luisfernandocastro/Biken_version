@@ -83,7 +83,7 @@ class _RecuperarPasswordScreen3State extends State<RecuperarPasswordScreen3> {
                             height: MediaQuery.of(context).size.width * 0.1,
                           ),
                           TextBox(
-                            name: 'Nueva Contraseña',
+                            placeholder: 'Nueva Contraseña',
                             icono: Icons.remove_red_eye,
                             verContrasena: verPassword(),
                             verCaracteres: !this._showPassword,
@@ -93,7 +93,7 @@ class _RecuperarPasswordScreen3State extends State<RecuperarPasswordScreen3> {
                             height: MediaQuery.of(context).size.width * 0.1,
                           ),
                           TextBox(
-                            name: 'Confirmar Contraseña',
+                            placeholder: 'Confirmar Contraseña',
                             icono: Icons.remove_red_eye,
                             verContrasena: verPassword(),
                             verCaracteres: !this._showPassword,

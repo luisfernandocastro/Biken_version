@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:biken/pages/editProfileScreen.dart';
 import 'package:biken/pages/profile_screen.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen1.dart';
 import 'package:biken/pages/RecuperarPassword/recPasswordScreen2.dart';
@@ -20,5 +21,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     '/recuperarPasswordScreen4': (context) => RecuperarPasswordScreen4(),
     '/ScreenHome': (context) => ScreenHome(),
     '/Screenprofile': (context) => ProfileScreen(),
+    '/ScreenEditProfile': (context) => EditProfileScreen(),
   };
 }

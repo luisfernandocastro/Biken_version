@@ -40,10 +40,7 @@ class _RegistroState extends State<Registro> {
                             child: Column(
                               children: [
                                 TextBox(
-                                  name: 'Nombre y Apellido',
-                                  icono: null,
-                                  verContrasena: null,
-                                  verCaracteres: false,
+                                  placeholder: 'Nombre y Apellido',
                                   tipoTexto: TextInputType.text,
                                 ),
                                 SizedBox(
@@ -51,10 +48,7 @@ class _RegistroState extends State<Registro> {
                                       MediaQuery.of(context).size.width * 0.05,
                                 ),
                                 TextBox(
-                                  name: 'Correo Electronico',
-                                  icono: null,
-                                  verContrasena: null,
-                                  verCaracteres: false,
+                                  placeholder: 'Correo Electronico',
                                   tipoTexto: TextInputType.emailAddress,
                                 ),
                                 SizedBox(
@@ -62,7 +56,7 @@ class _RegistroState extends State<Registro> {
                                       MediaQuery.of(context).size.width * 0.05,
                                 ),
                                 TextBox(
-                                  name: 'Contraseña',
+                                  placeholder: 'Contraseña',
                                   icono: Icons.remove_red_eye,
                                   verContrasena: verPassword(),
                                   verCaracteres: !this._showPassword,
@@ -73,7 +67,7 @@ class _RegistroState extends State<Registro> {
                                       MediaQuery.of(context).size.width * 0.05,
                                 ),
                                 TextBox(
-                                  name: 'Repite tu contraseña',
+                                  placeholder: 'Repite tu contraseña',
                                   icono: Icons.remove_red_eye,
                                   verContrasena: verPassword(),
                                   verCaracteres: !this._showPassword,
@@ -84,10 +78,7 @@ class _RegistroState extends State<Registro> {
                                       MediaQuery.of(context).size.width * 0.05,
                                 ),
                                 TextBox(
-                                  name: 'Número de Teléfono',
-                                  icono: null,
-                                  verContrasena: null,
-                                  verCaracteres: false,
+                                  placeholder: 'Número de Teléfono',
                                   tipoTexto: TextInputType.phone,
                                 ),
                                 SizedBox(

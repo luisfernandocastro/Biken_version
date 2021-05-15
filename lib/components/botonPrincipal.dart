@@ -7,15 +7,21 @@ class BotonPrincipal extends StatelessWidget {
     @required this.textBoton,
     @required this.ruta,
     @required this.tag,
+    this.marginHorizontal = 0,
+    this.marginVertical = 0,
   }) : super(key: key);
 
   final String textBoton;
   final String ruta;
   final String tag;
+  final double marginHorizontal;
+  final double marginVertical;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(
+          horizontal: marginHorizontal, vertical: marginVertical),
       height: 50,
       child: Container(
         child: Hero(
