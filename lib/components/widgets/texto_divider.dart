@@ -7,8 +7,8 @@ class TextoDivider extends StatefulWidget {
   const TextoDivider({
     Key key,
     @required this.textotitle,
-    @required this.iconOne,
-    @required this.iconTwo,
+    this.iconOne,
+    this.iconTwo,
   }) : super(key: key);
 
   final String textotitle;

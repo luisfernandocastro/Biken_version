@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:biken/components/botonPrincipal.dart';
-import 'package:biken/components/painter.dart';
+import 'package:biken/components/widgets/botonPrincipal.dart';
+import 'package:biken/styles/painter.dart';
 import 'package:flutter/material.dart';
 
 class RecuperarPasswordScreen4 extends StatelessWidget {
@@ -57,15 +57,6 @@ class RecuperarPasswordScreen4 extends StatelessWidget {
                           tag: 'botonreglogin'),
                     ),
                     Spacer(),
-/*                     ListTile(
-                      title: Row(
-                        children: [
-                          Text('Hola', style: TextStyle(color: Colors.red)),
-                          Text('Hola2', style: TextStyle(color: Colors.blue)),
-                        ],
-                      ),
-                      leading: Icon(Icons.accessibility_new_sharp),
-                    ), */
                   ],
                 ),
               ),

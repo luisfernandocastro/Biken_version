@@ -1,4 +1,4 @@
-import 'package:biken/components/biken_icons_icons.dart';
+import 'package:biken/styles/biken_icons_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hexcolor/hexcolor.dart';

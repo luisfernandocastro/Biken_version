@@ -1,8 +1,8 @@
-import 'package:biken/components/containerButton.dart';
-import 'package:biken/components/customcards.dart';
+import 'package:biken/components/widgets/containerButton.dart';
+import 'package:biken/components/widgets/customcards.dart';
 import 'package:flutter/material.dart';
-import 'package:biken/components/circle_avatarprofile.dart';
-import 'package:biken/components/texto_divider.dart';
+import 'package:biken/components/widgets/circle_avatarprofile.dart';
+import 'package:biken/components/widgets/texto_divider.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hexcolor/hexcolor.dart';
 

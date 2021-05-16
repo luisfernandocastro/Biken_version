@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:biken/pages/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:biken/components/icono_biken.dart';
-import 'package:biken/components/painter.dart';
+import 'package:biken/components/widgets/icono_biken.dart';
+import 'package:biken/styles/painter.dart';
 
 class SplashScreen extends StatefulWidget {
   SplashScreen({Key key}) : super(key: key);

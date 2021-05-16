@@ -1,10 +1,10 @@
-import 'package:biken/components/biken_icons_icons.dart';
+import 'package:biken/styles/biken_icons_icons.dart';
 import 'package:biken/components/textFooter.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:biken/components/botonPrincipal.dart';
-import 'package:biken/components/circuloIconoScreensPass.dart';
-import 'package:biken/components/transicionCirculares.dart';
+import 'package:biken/components/widgets/botonPrincipal.dart';
+import 'package:biken/components/widgets/circuloIconoScreensPass.dart';
+import 'package:biken/components/widgets/transicionCirculares.dart';
 
 class RecuperarPasswordScreen2 extends StatelessWidget {
   const RecuperarPasswordScreen2({Key key}) : super(key: key);

@@ -1,11 +1,11 @@
 import 'package:biken/components/textFooter.dart';
 import 'package:flutter/material.dart';
-import 'package:biken/components/botonPrincipal.dart';
-import 'package:biken/components/cajasTexto.dart';
+import 'package:biken/components/widgets/botonPrincipal.dart';
+import 'package:biken/components/widgets/cajasTexto.dart';
 import 'package:biken/components/contrasenaOlvidada.dart';
 import 'package:biken/components/sociales.dart';
-import 'package:biken/components/icono_biken.dart';
-import 'package:biken/components/painter.dart';
+import 'package:biken/components/widgets/icono_biken.dart';
+import 'package:biken/styles/painter.dart';
 
 class Login extends StatefulWidget {
   Login({

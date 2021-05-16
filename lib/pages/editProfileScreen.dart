@@ -1,10 +1,10 @@
-import 'package:biken/components/biken_icons_icons.dart';
-import 'package:biken/components/botonPrincipal.dart';
-import 'package:biken/components/circle_avatarprofile.dart';
-import 'package:biken/components/containerButton.dart';
-import 'package:biken/pages/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:biken/styles/biken_icons_icons.dart';
+import 'package:biken/components/widgets/botonPrincipal.dart';
+import 'package:biken/components/widgets/circle_avatarprofile.dart';
+import 'package:biken/components/widgets/containerButton.dart';
+import 'package:biken/pages/profile_screen.dart';
 
 class EditProfileScreen extends StatefulWidget {
   EditProfileScreen({Key key}) : super(key: key);
