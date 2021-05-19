@@ -89,7 +89,7 @@ class _RegistroState extends State<Registro> {
                                   height: 50,
                                   child: BotonPrincipal(
                                     textBoton: 'Continuar',
-                                    ruta: 'null/sin definir',
+                                    ruta: '/completionScreenRegister',
                                     tag: 'botonRegistro',
                                   ),
                                 ),

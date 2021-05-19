@@ -75,6 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               title: 'Compartir Biken App',
                               iconLeading: Icons.share,
                               colorIconLeading: Colors.black,
+                              activateSubtitle: false,
                             ),
                             const SizedBox(
                               height: 20.0,

@@ -3,8 +3,21 @@ import 'package:biken/components/widgets/botonPrincipal.dart';
 import 'package:biken/styles/painter.dart';
 import 'package:flutter/material.dart';
 
-class RecuperarPasswordScreen4 extends StatelessWidget {
-  const RecuperarPasswordScreen4({Key key}) : super(key: key);
+class CompletionScreen extends StatelessWidget {
+  const CompletionScreen({
+    Key key,
+    @required this.textPrimary,
+    @required this.textSecundary,
+    @required this.textButton,
+    @required this.navegationRuta,
+    this.textSubtitle,
+  }) : super(key: key);
+
+  final String textPrimary,
+      textSecundary,
+      textButton,
+      textSubtitle,
+      navegationRuta;
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +50,18 @@ class RecuperarPasswordScreen4 extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            'Genial!',
+                            '$textPrimary', //'Genial!',
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            '¡su contraseña se ha restablecido correctamente! ahora  inicie sesión con su nueva contraseña.',
+                            '$textSecundary', //'¡su contraseña se ha restablecido correctamente! ahora  inicie sesión con su nueva contraseña.',
                             textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            '$textSubtitle', //'¡su contraseña se ha restablecido correctamente! ahora  inicie sesión con su nueva contraseña.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20),
                           ),
                         ],
                       ),
@@ -52,9 +70,9 @@ class RecuperarPasswordScreen4 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40.0),
                       child: BotonPrincipal(
-                          textBoton: 'Iniciar sesión',
-                          ruta: '/login',
-                          tag: 'botonreglogin'),
+                          textBoton: '$textButton',
+                          ruta: '$navegationRuta',
+                          tag: 'btncompletion1'),
                     ),
                     Spacer(),
                   ],

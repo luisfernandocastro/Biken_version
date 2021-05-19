@@ -4,7 +4,7 @@ import 'package:biken/styles/biken_icons_icons.dart';
 import 'package:biken/components/widgets/botonPrincipal.dart';
 import 'package:biken/components/widgets/circle_avatarprofile.dart';
 import 'package:biken/components/widgets/containerButton.dart';
-import 'package:biken/pages/profile_screen.dart';
+import 'package:biken/Screens/profile_screen.dart';
 
 class EditProfileScreen extends StatefulWidget {
   EditProfileScreen({Key key}) : super(key: key);

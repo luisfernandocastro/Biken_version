@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:biken/styles/biken_icons_icons.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/rendering.dart';
-import 'package:biken/pages/pages_home/start_Screen.dart';
-import 'package:biken/pages/login_screen.dart';
-import 'package:biken/pages/profile_screen.dart';
+import 'package:biken/Screens/screens_uploadBike/uploadBike_screen1.dart';
+import 'package:biken/styles/biken_icons_icons.dart';
+import 'package:biken/Screens/screens_home/start_Screen.dart';
+import 'package:biken/Screens/profile_screen.dart';
 
 const _maxSize = 35.0;
 bool expanded = false;
@@ -21,9 +21,9 @@ class ScreenHome extends StatefulWidget {
 class _ScreenHomeState extends State<ScreenHome> {
   int pageActual = 1;
   List<Widget> pages = [
-    ProfileScreen(),
+    ScreenUploadBike(),
     ScreenStart(),
-    Login(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {

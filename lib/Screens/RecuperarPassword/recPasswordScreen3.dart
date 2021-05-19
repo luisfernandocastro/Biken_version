@@ -104,7 +104,7 @@ class _RecuperarPasswordScreen3State extends State<RecuperarPasswordScreen3> {
                           ),
                           BotonPrincipal(
                             textBoton: 'Aceptar',
-                            ruta: '/recuperarPasswordScreen4',
+                            ruta: '/completionScreenPassword',
                             tag: 'cambioPassswordExit',
                           ),
                         ],

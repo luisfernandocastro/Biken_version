@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomCards extends StatelessWidget {
-  const CustomCards(
-      {Key key,
-      @required this.sizeHeight,
-      @required this.sizeWidth,
-      @required this.imageCard})
-      : super(key: key);
+  const CustomCards({
+    Key key,
+    @required this.sizeHeight,
+    @required this.sizeWidth,
+    @required this.imageCard,
+    this.child,
+  }) : super(key: key);
 
   final double sizeHeight;
   final double sizeWidth;
   final String imageCard;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,9 @@ class CustomCards extends StatelessWidget {
                       height: sizeHeight,
                       fit: BoxFit.cover,
                     ),
+                    Container(
+                      child: child,
+                    )
                   ],
                 ),
               ],
