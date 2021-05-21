@@ -11,7 +11,7 @@ class CompletionScreenPassword extends StatelessWidget {
       textSecundary:
           '¡su contraseña se ha restablecido correctamente! ahora  inicie sesión con su nueva contraseña.',
       textButton: 'Iniciar Sesión',
-      navegationRuta: '/Login',
+      navegationRuta: '/login',
     );
   }
 }

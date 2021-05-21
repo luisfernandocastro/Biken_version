@@ -39,7 +39,9 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Spacer(),
                 Center(),
-                IconoBiken(),
+                ZoomIn(
+                  child: IconoBiken(),
+                ),
                 Spacer(),
                 FadeInLeftBig(
                   child: Container(

@@ -10,7 +10,7 @@ class CompletionScreen extends StatelessWidget {
     @required this.textSecundary,
     @required this.textButton,
     @required this.navegationRuta,
-    this.textSubtitle,
+    this.textSubtitle = '',
   }) : super(key: key);
 
   final String textPrimary,

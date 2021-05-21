@@ -1,4 +1,5 @@
 import 'package:biken/components/widgets/botonPrincipal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/components/widgets/transicionCirculares.dart';
 import 'package:biken/components/widgets/cajasTexto.dart';
