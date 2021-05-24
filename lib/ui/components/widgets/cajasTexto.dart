@@ -19,6 +19,7 @@ class TextBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String intext = '';
     return Container(
       //height: 35.0,
       decoration: BoxDecoration(
@@ -33,6 +34,10 @@ class TextBox extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: TextField(
+              onChanged: (value) {
+                value = intext;
+                print(intext);
+              },
               keyboardType: tipoTexto,
               obscureText: verCaracteres,
               decoration: InputDecoration(

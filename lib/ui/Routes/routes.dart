@@ -1,3 +1,4 @@
+import 'package:biken/Screens/homeUser.dart';
 import 'package:flutter/material.dart';
 import 'package:biken/Screens/completionsScreens/completionAllScreen.dart';
 import 'package:biken/Screens/editProfileScreen.dart';
@@ -20,6 +21,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     '/recuperarPasswordScreen2': (context) => RecuperarPasswordScreen2(),
     '/recuperarPasswordScreen3': (context) => RecuperarPasswordScreen3(),
     '/ScreenHome': (context) => ScreenHome(),
+    '/ScreenHomeUser': (context) => HomeUser(),
     '/Screenprofile': (context) => ProfileScreen(),
     '/ScreenEditProfile': (context) => EditProfileScreen(),
     '/ScreenUploadBike2': (context) => ScreenUploadBike2(),

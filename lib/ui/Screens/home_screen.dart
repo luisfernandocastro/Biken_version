@@ -1,10 +1,11 @@
+import 'package:biken/pruebas/pruebaviewprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/rendering.dart';
 import 'package:biken/Screens/screens_uploadBike/uploadBike_screen1.dart';
 import 'package:biken/styles/biken_icons_icons.dart';
 import 'package:biken/Screens/screens_home/start_Screen.dart';
-import 'package:biken/Screens/profile_screen.dart';
+//import 'package:biken/Screens/profile_screen.dart';
 
 const _maxSize = 35.0;
 bool expanded = false;
@@ -23,7 +24,7 @@ class _ScreenHomeState extends State<ScreenHome> {
   List<Widget> pages = [
     ScreenUploadBike(),
     ScreenStart(),
-    ProfileScreen(),
+    PruebaViewProfile(),
   ];
   @override
   Widget build(BuildContext context) {

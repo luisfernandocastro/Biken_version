@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "159655960685",
+    "project_id": "biken-f9ee9",
+    "storage_bucket": "biken-f9ee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159655960685:android:cd8e56b06e17c24bdb5f64",
+        "android_client_info": {
+          "package_name": "com.example.biken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159655960685-ilcsrmv2j836e9draemubbegko7h4vpd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biken",
+            "certificate_hash": "e98a7dff19cf278a90a63ec5ce89033cfe5615c0"
+          }
+        },
+        {
+          "client_id": "159655960685-ek2ivurus42s59bir0c15g86c6s0i14r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1wONdBpUv6R4lItLrQSxq8Y7CDKQC1fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159655960685-ek2ivurus42s59bir0c15g86c6s0i14r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
